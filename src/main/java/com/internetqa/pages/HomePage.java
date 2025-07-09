@@ -1,6 +1,7 @@
 package com.internetqa.pages;
 
 import com.internetqa.pages.alertsFrameWindows.AlertsPage;
+import com.internetqa.pages.alertsFrameWindows.FramesPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,25 +25,26 @@ public class HomePage extends BasePage {
         return new AlertsPage(driver);
     }
 
-//    @FindBy(css = "a[href='/nested_frames']")
-//    WebElement frameWindows;
-//    public HomePage getAlertsFrameWindows() {
-//        clickWithJS(frameWindows, 0, 600);
-//        return this;
-//
-//    }
-
     @FindBy( css = "a[href='/frames']")
     WebElement frames;
+
     public HomePage selectFrame() {
-        click(frames);
+        clickWithJS(frames,0,300);
         return  this;
     }
-    @FindBy(xpath = "//a[normalize-space()='Nested Frames']")
-    WebElement nestedFrames;
-    public HomePage selectNestedFrames() {
-        click(nestedFrames);
-        return this;
+
+    @FindBy(css = "a[href='/iframe']")
+    WebElement iFrames;
+    public FramesPage selectIFrames() {
+      clickWithJS(iFrames,0,300);
+        return new FramesPage(driver);
     }
+    @FindBy(css= "a[href='/nested_frames']")
+    WebElement nestedFrames;
+    public FramesPage selectNestedFrames() {
+      clickWithJS(nestedFrames,0,300);
+       return new  FramesPage(driver);
+   }
 }
+
 
