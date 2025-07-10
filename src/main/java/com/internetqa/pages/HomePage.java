@@ -42,9 +42,17 @@ public class HomePage extends BasePage {
     @FindBy(css= "a[href='/nested_frames']")
     WebElement nestedFrames;
     public FramesPage selectNestedFrames() {
-      clickWithJS(nestedFrames,0,300);
+      click(nestedFrames);
        return new  FramesPage(driver);
    }
+
+    @FindBy(css = "a[href='/horizontal_slider']")
+WebElement horizontalSlider;
+    public HorizontalSliderPage selectHorizontalSlider() {
+        click(horizontalSlider);
+        return new HorizontalSliderPage(driver);
+    }
+
 }
 
 

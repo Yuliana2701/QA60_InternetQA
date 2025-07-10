@@ -15,6 +15,12 @@ import java.util.List;
 
 public class FramesPage extends BasePage {
 
+    public String middleText;
+    public String rightText;
+    public String bottomText;
+
+
+
     public FramesPage(WebDriver driver) {
         super(driver);
     }
@@ -61,26 +67,41 @@ public class FramesPage extends BasePage {
         return this;
     }
 
-    // тест падает
-    @FindBy(tagName = "body")
-    WebElement body;
 
     public FramesPage handleNestedFrames() {
-        driver.switchTo().frame(iframeText);// switch to frame1
-        //gettext from parent frame
-        System.out.println("IFrames is " + body.getText());
-        System.out.println("Numbers of inside iframe is " + iframes.size());// number of Iframes in parent
-        driver.switchTo().defaultContent();
-        driver.switchTo().frame(0);// switch to child
-        System.out.println("Iframe is " + body.getText());
-        driver.switchTo().defaultContent();
-        // switch to parent iframe
-        driver.switchTo().parentFrame();
-        System.out.println("Iframe is " + body.getText());
-        return this;
 
+            driver.switchTo().frame("frame-top");
+
+            driver.switchTo().frame("frame-middle");
+            middleText = driver.findElement(By.id("content")).getText();
+
+            driver.switchTo().parentFrame();
+
+            driver.switchTo().frame("frame-right");
+            rightText = driver.findElement(By.tagName("body")).getText();
+
+            driver.switchTo().defaultContent();
+
+            driver.switchTo().frame("frame-bottom");
+            bottomText = driver.findElement(By.tagName("body")).getText();
+
+            driver.switchTo().defaultContent();
+
+            return this;
+        }
+    public FramesPage verifyIFrames(String expectedMiddle, String expectedRight, String expectedBottom) {
+        Assert.assertEquals(middleText, expectedMiddle);
+        Assert.assertEquals(rightText, expectedRight);
+        Assert.assertEquals(bottomText, expectedBottom);
+        return this;
     }
-    }
+
+
+}
+
+
+
+
 
 
 

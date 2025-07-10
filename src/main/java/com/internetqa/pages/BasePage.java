@@ -23,6 +23,10 @@ public class BasePage {
     public void click(WebElement element) {
         element.click();
     }
+    public String getText(WebElement element) {
+        return element.getText();
+    }
+
 
     public void type(WebElement element, String text) {
         if (text != null) {
@@ -53,5 +57,30 @@ public class BasePage {
         return new WebDriverWait(driver, Duration.ofSeconds(time))
                 .until(ExpectedConditions.textToBePresentInElement(element, text));
 
+    }
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public void hideAd() {
+        js.executeScript(
+                "var ad = document.getElementById('fixedban'); if (ad) { ad.style.display = 'none'; }"
+        );
+    }
+
+    public void hideFooter() {
+        js.executeScript(
+                "var footer = document.querySelector('#page-footer'); if (footer) { footer.style.display = 'none'; }"
+        );
+    }
+
+
+    public void hideIFrames() {
+        hideAd();
+        hideFooter();
     }
 }

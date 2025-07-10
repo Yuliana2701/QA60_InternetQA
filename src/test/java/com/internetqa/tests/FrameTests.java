@@ -31,12 +31,14 @@ public class FrameTests extends TestBase {
                 .switchToMainPage()
                 .verifyMainPageByTitle("An iFrame containing the TinyMCE WYSIWYG Editor");
     }
-    // тест падает
+
      @Test
     public void nestedIFramesTest() {
-        new HomePage(driver)
-                .selectNestedFrames()
-                .handleNestedFrames();
+         driver.get("https://the-internet.herokuapp.com");
+        new HomePage(driver).selectNestedFrames().handleNestedFrames()
+                .verifyIFrames("MIDDLE","RIGHT","BOTTOM");
+
+
     }
 
 }
