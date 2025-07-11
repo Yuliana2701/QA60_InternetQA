@@ -2,9 +2,11 @@ package com.internetqa.pages;
 
 import com.internetqa.pages.alertsFrameWindows.AlertsPage;
 import com.internetqa.pages.alertsFrameWindows.FramesPage;
+import com.internetqa.pages.widgets.HoversPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
@@ -52,7 +54,37 @@ WebElement horizontalSlider;
         click(horizontalSlider);
         return new HorizontalSliderPage(driver);
     }
+    @FindBy(css = "a[href='/hovers']")
+    WebElement hovers;
 
+    public HoversPage selectHovers() {
+        clickWithJS(hovers, 0, 300);
+        return new HoversPage(driver);
+    }
+
+
+    @FindBy(css = "a[href='/context_menu']")
+    WebElement contextMenuLink;
+
+    public HomePage selectContextMenu() {
+        clickWithJS(contextMenuLink, 0, 300);
+        return new HomePage(driver);
+    }
+    @FindBy(css = "a[href='/dropdown']")
+    WebElement dropdownLink;
+
+    public HomePage selectDropdown() {
+        clickWithJS(dropdownLink, 0, 300);
+        return this;
+    }
+
+    @FindBy(css = "a[href='/drag_and_drop']")
+    WebElement dragAndDropLink;
+
+    public HomePage selectDragAndDrop() {
+        clickWithJS(dragAndDropLink, 0, 300);
+        return this;
+    }
 }
 
 
