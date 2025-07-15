@@ -85,6 +85,13 @@ WebElement horizontalSlider;
         clickWithJS(dragAndDropLink, 0, 300);
         return this;
     }
+
+    @FindBy(css = "a[href='/upload']")
+    WebElement upload;
+    public FileUploadPage selectFileUpload() {
+        clickWithJS(upload,0,300);
+        return new FileUploadPage(driver);
+    }
 }
 
 
