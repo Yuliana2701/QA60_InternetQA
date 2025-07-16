@@ -1,0 +1,10 @@
+com\internetqa\tests\FileUploadTests.class
+com\internetqa\tests\TestBase.class
+com\internetqa\tests\DragAndDropTests.class
+com\internetqa\tests\DropdownListTests.class
+com\internetqa\tests\HorizontalSliderTests.class
+com\internetqa\tests\ContextMenuTests.class
+com\internetqa\tests\AlertsTests.class
+com\internetqa\tests\LoginTests.class
+com\internetqa\tests\HoversTests.class
+com\internetqa\tests\FrameTests.class

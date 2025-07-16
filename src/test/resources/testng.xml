@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="user" verbose="1">
+    <test name="user">
+        <parameter name="userName" value="tomsmith"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <classes>
+            <class name="com.internetqa.tests.LoginTests"/>
+            <class name="com.internetqa.tests.HoversTests"/>
+
+        </classes>
+    </test>
+</suite>

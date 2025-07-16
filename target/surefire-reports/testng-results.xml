@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-16T15:38:28 CEST" name="user" finished-at="2025-07-16T15:38:38 CEST" duration-ms="10318">
+    <groups>
+    </groups>
+    <test started-at="2025-07-16T15:38:28 CEST" name="user" finished-at="2025-07-16T15:38:38 CEST" duration-ms="10318">
+      <class name="com.internetqa.tests.HoversTests">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:com.internetqa.tests.HoversTests@34f5090e]" started-at="2025-07-16T15:38:33 CEST" name="init" finished-at="2025-07-16T15:38:36 CEST" duration-ms="3156" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.internetqa.tests.HoversTests.hoversTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="precondition()[pri:0, instance:com.internetqa.tests.HoversTests@34f5090e]" started-at="2025-07-16T15:38:36 CEST" name="precondition" finished-at="2025-07-16T15:38:36 CEST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precondition -->
+        <test-method signature="hoversTest()[pri:0, instance:com.internetqa.tests.HoversTests@34f5090e]" started-at="2025-07-16T15:38:36 CEST" name="hoversTest" finished-at="2025-07-16T15:38:38 CEST" duration-ms="1732" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hoversTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.internetqa.tests.HoversTests@34f5090e]" started-at="2025-07-16T15:38:38 CEST" name="tearDown" finished-at="2025-07-16T15:38:38 CEST" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hoversTest status=SUCCESS method=HoversTests.hoversTest()[pri:0, instance:com.internetqa.tests.HoversTests@34f5090e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.internetqa.tests.HoversTests -->
+      <class name="com.internetqa.tests.LoginTests">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:com.internetqa.tests.LoginTests@2e222612]" started-at="2025-07-16T15:38:28 CEST" name="init" finished-at="2025-07-16T15:38:31 CEST" duration-ms="3317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.internetqa.tests.LoginTests.loginPositiveTest(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="loginPositiveTest(java.lang.String,java.lang.String)[pri:0, instance:com.internetqa.tests.LoginTests@2e222612]" started-at="2025-07-16T15:38:31 CEST" name="loginPositiveTest" finished-at="2025-07-16T15:38:33 CEST" duration-ms="1485" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPositiveTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.internetqa.tests.LoginTests@2e222612]" started-at="2025-07-16T15:38:33 CEST" name="tearDown" finished-at="2025-07-16T15:38:33 CEST" duration-ms="126" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginPositiveTest status=SUCCESS method=LoginTests.loginPositiveTest(java.lang.String,java.lang.String)[pri:0, instance:com.internetqa.tests.LoginTests@2e222612] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.internetqa.tests.LoginTests -->
+    </test> <!-- user -->
+  </suite> <!-- user -->
+</testng-results>

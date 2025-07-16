@@ -1,0 +1,14 @@
+com\internetqa\pages\DragAndDropPage.class
+com\internetqa\pages\FileUploadPage.class
+com\internetqa\pages\alertsFrameWindows\AlertsPage.class
+com\internetqa\pages\LoginPage.class
+com\internetqa\utils\MyListener.class
+com\internetqa\pages\alertsFrameWindows\FramesPage.class
+com\internetqa\pages\HorizontalSliderPage.class
+com\internetqa\pages\widgets\ContextMenuPage.class
+com\internetqa\config\ApplicationManager.class
+com\internetqa\pages\widgets\HoversPage.class
+com\internetqa\pages\DropdownListPage.class
+com\internetqa\pages\SecureAreaPage.class
+com\internetqa\pages\BasePage.class
+com\internetqa\pages\HomePage.class
